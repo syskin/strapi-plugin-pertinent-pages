@@ -1,0 +1,2 @@
+# Strapi plugin pertinent pages
+

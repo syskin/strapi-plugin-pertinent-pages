@@ -1,0 +1,36 @@
+{
+  "name": "strapi-plugin-pertinent-pages",
+  "version": "1.0.0",
+  "description": "This is the description of the plugin.",
+  "private": true,
+  "scripts": {
+    "lint": "eslint \"./**/*.js\" --quiet"
+  },
+  "strapi": {
+    "name": "pages",
+    "icon": "plug",
+    "description": "Description of pages plugin."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/pertinent1/strapi-plugin-pertinent-pages.git"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "M Cadu",
+    "email": "",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=12.19.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "prettier": "^2.2.1"
+  }
+}
