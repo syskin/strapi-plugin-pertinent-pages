@@ -5,7 +5,7 @@
       "path": "/meta",
       "handler": "Pages.meta",
       "config": {
-        "policies": ["plugins::users-permissions.rateLimit", "plugins::users-permissions.isAuthenticated"]
+        "policies": ["plugins::users-permissions.rateLimit"]
       }
     },
     {
@@ -21,7 +21,7 @@
       "path": "/create",
       "handler": "Pages.create",
       "config": {
-        "policies": ["plugins::users-permissions.rateLimit", "plugins::users-permissions.isAuthenticated"]
+        "policies": ["plugins::users-permissions.rateLimit"]
       }
     },
     {
@@ -29,7 +29,7 @@
       "path": "/page/:id",
       "handler": "Pages.getById",
       "config": {
-        "policies": ["plugins::users-permissions.rateLimit", "plugins::users-permissions.isAuthenticated"]
+        "policies": ["plugins::users-permissions.rateLimit"]
       }
     },
     {
@@ -37,7 +37,7 @@
       "path": "/page/:id",
       "handler": "Pages.update",
       "config": {
-        "policies": ["plugins::users-permissions.rateLimit", "plugins::users-permissions.isAuthenticated"]
+        "policies": ["plugins::users-permissions.rateLimit"]
       }
     },
     {
@@ -45,7 +45,7 @@
       "path": "/page/:id",
       "handler": "Pages.delete",
       "config": {
-        "policies": ["plugins::users-permissions.rateLimit", "plugins::users-permissions.isAuthenticated"]
+        "policies": ["plugins::users-permissions.rateLimit"]
       }
     }
   ]
