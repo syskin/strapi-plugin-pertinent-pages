@@ -21,7 +21,7 @@ module.exports = {
           `isDeletable`,
           `name`,
           `path`,
-          `description`
+          `description`,
           `updatedAt`,
           `createdAt`,
         ];

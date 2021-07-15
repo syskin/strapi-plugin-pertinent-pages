@@ -3,6 +3,7 @@ module.exports = async () => {
     const permOrm = strapi.query(`permission`, `users-permissions`);
     const pluginPermissions = await permOrm.find({ type: `pertinent-pages` });
     for (const currentPermission of pluginPermissions) {
+      /*
       if (currentPermission.role.type === `authenticated`) {
         strapi.log.info(
           `Allowing authenticated to call ${currentPermission.controller}.${currentPermission.action}`
@@ -13,20 +14,19 @@ module.exports = async () => {
         );
         continue;
       }
-
       // permission is for public - commentend until authentication will be setup in the Studio
       // const isReadEndpoint = [`path`].includes(currentPermission.action);
       const isReadEndpoint = true
       if (isReadEndpoint) {
-        strapi.log.info(
-          `Allowing public to call ${currentPermission.controller}.${currentPermission.action}`
-        );
-        permOrm.update(
-          { id: currentPermission.id },
-          { ...currentPermission, enabled: true }
-        );
-        continue;
-      }
+      */
+      strapi.log.info(
+        `Allowing public to call ${currentPermission.controller}.${currentPermission.action}`
+      );
+      permOrm.update(
+        { id: currentPermission.id },
+        { ...currentPermission, enabled: true }
+      );
+      continue;
     }
 
     const homePage = await strapi
