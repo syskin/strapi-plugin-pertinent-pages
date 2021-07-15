@@ -14,8 +14,9 @@ module.exports = async () => {
         continue;
       }
 
-      // permission is for public
-      const isReadEndpoint = [`path`].includes(currentPermission.action);
+      // permission is for public - commentend until authentication will be setup in the Studio
+      // const isReadEndpoint = [`path`].includes(currentPermission.action);
+      const isReadEndpoint = true
       if (isReadEndpoint) {
         strapi.log.info(
           `Allowing public to call ${currentPermission.controller}.${currentPermission.action}`
