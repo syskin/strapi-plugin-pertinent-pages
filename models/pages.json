@@ -24,13 +24,11 @@
     "root": {
       "type": "json"
     },
-    "isFooterDisplayed": {
-      "type": "boolean",
-      "default": false
+    "title": {
+      "type": "text"
     },
-    "isHeaderDisplayed": {
-      "type": "boolean",
-      "default": false
+    "description": {
+      "type": "text"
     },
     "isDeletable": {
       "type": "boolean",

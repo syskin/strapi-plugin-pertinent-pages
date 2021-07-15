@@ -33,7 +33,7 @@ module.exports = async () => {
       .find({ path: `/` });
     if (homePage.length === 0) {
       const data = {
-        name: `Accueil`,
+        name: `Home`,
         path: `/`,
         root: [],
         isDeletable: false,
