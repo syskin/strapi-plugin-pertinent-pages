@@ -18,11 +18,10 @@ module.exports = {
       if (result && result.length > 0) {
         const allowed = [
           `id`,
-          `isFooterDisplayed`,
-          `isHeaderDisplayed`,
           `isDeletable`,
           `name`,
           `path`,
+          `description`
           `updatedAt`,
           `createdAt`,
         ];
@@ -58,8 +57,8 @@ module.exports = {
       let pageData = {};
       const allowed = [
         `id`,
-        `isFooterDisplayed`,
-        `isHeaderDisplayed`,
+        `title`,
+        `description`,
         `isDeletable`,
         `name`,
         `root`,
@@ -103,8 +102,8 @@ module.exports = {
 
       let pageData = {};
       const allowed = [
-        `isFooterDisplayed`,
-        `isHeaderDisplayed`,
+        `title`,
+        `description`,
         `name`,
         `root`,
       ];
@@ -170,8 +169,8 @@ module.exports = {
 
       let data = body;
       const allowed = [
-        `isFooterDisplayed`,
-        `isHeaderDisplayed`,
+        `title`,
+        `description`,
         `name`,
         `root`,
       ];
