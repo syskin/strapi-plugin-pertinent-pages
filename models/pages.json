@@ -12,20 +12,24 @@
   },
   "attributes": {
     "name": {
-      "type": "text",
+      "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "maxLength": 60
     },
     "slug": {
-      "type": "text",
+      "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "maxLength": 50
+
     },
     "root": {
       "type": "json"
     },
     "title": {
-      "type": "text"
+      "type": "string",
+      "maxLength": 60
     },
     "description": {
       "type": "text"
