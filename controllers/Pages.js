@@ -20,7 +20,7 @@ module.exports = {
           `id`,
           `isDeletable`,
           `name`,
-          `path`,
+          `slug`,
           `description`,
           `updatedAt`,
           `createdAt`,
@@ -62,7 +62,7 @@ module.exports = {
         `isDeletable`,
         `name`,
         `root`,
-        `path`,
+        `slug`,
         `updatedAt`,
         `createdAt`,
       ];
@@ -86,17 +86,17 @@ module.exports = {
    *
    * @return {Object}
    */
-  path: async (ctx) => {
+  slug: async (ctx) => {
     try {
       const data = ctx.request.body;
 
-      if (!data.path) {
-        return ctx.badRequest(`Path must be defined`);
+      if (!data.slug) {
+        return ctx.badRequest(`Slug must be defined`);
       }
 
       const result = await strapi
         .query(`pages`, `pertinent-pages`)
-        .findOne({ path: data.path });
+        .findOne({ slug: data.slug });
 
       if(!result) return ctx.badRequest(`This page doesn't exists`);
 
@@ -130,13 +130,13 @@ module.exports = {
     try {
       const data = ctx.request.body;
 
-      if (!data.name || !data.path) {
-        return ctx.badRequest(`Path and name must be defined`);
+      if (!data.name || !data.slug) {
+        return ctx.badRequest(`Slug and name must be defined`);
       }
 
       const checkExistingPages = await strapi
         .query(`pages`, `pertinent-pages`)
-        .count({ _or: [{ name: data.name }, { path: data.path }] });
+        .count({ _or: [{ name: data.name }, { slug: data.slug }] });
 
       if (checkExistingPages && checkExistingPages > 0) {
         return ctx.badRequest(`Page already exists`);
@@ -144,7 +144,7 @@ module.exports = {
 
       await strapi
         .query(`pages`, `pertinent-pages`)
-        .create({ name: data.name, path: data.path });
+        .create({ name: data.name, slug: data.slug });
 
       ctx.send({ message: `Page created successfully` });
     } catch (e) {

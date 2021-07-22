@@ -31,11 +31,11 @@ module.exports = async () => {
 
     const homePage = await strapi
       .query(`pages`, `pertinent-pages`)
-      .find({ path: `/` });
+      .find({ slug: `/` });
     if (homePage.length === 0) {
       const data = {
         name: `Home`,
-        path: `/`,
+        slug: `/`,
         root: [],
         isDeletable: false,
       };

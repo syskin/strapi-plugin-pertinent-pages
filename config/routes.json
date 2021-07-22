@@ -10,8 +10,8 @@
     },
     {
       "method": "POST",
-      "path": "/path",
-      "handler": "Pages.path",
+      "path": "/slug",
+      "handler": "Pages.slug",
       "config": {
         "policies": ["plugins::users-permissions.rateLimit"]
       }

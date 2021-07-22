@@ -16,7 +16,7 @@
       "required": true,
       "unique": true
     },
-    "path": {
+    "slug": {
       "type": "text",
       "required": true,
       "unique": true
