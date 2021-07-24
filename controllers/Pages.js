@@ -184,11 +184,10 @@ module.exports = {
 
       const updateData = await strapi
         .query(`pages`, `pertinent-pages`)
-        .update({ _id: params.id }, data);
+        .update({ id: params.id }, data);
 
       ctx.send({ message: `Page data updated`, data: updateData });
     } catch (e) {
-      console.log(e)
       return ctx.badRequest(`An error occured`);
     }
   },
